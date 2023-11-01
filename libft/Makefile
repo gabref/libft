@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: galves-f <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2023/11/01 20:58:09 by galves-f         ###   ########.fr        #
+#    Updated: 2023/11/01 22:11:11 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
 # SRC 	= $(wildcard *.c)
-SRC 	= ft_isalpha.c
+SRC 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c
 # OBJ 	= $(SRC:.c=.o)
 OBJF 	= obj
 OBJ 	= $(patsubst %.c, $(OBJF)/%.o, $(SRC))
@@ -24,7 +24,7 @@ CFLAGS 	= -Wall -Wextra -Werror
 RM 		= rm -rf
 
 $(OBJF)/%.o: %.c
-	mkdir $(OBJF)
+	mkdir -p $(OBJF)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC)
 
 all: $(NAME)
@@ -40,3 +40,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
