@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2023/11/01 22:11:11 by galves-f         ###   ########.fr        #
+#    Updated: 2023/11/01 22:27:51 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
