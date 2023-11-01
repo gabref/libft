@@ -15,8 +15,8 @@ will begin with the ’ft_’ prefix. For instance, `strlen` becomes `ft_strlen`
 These function do not require any external functions
 
 - [x] isalpha
-- [ ] isdigit
-- [ ] isalnum
+- [x] isdigit
+- [x] isalnum
 - [ ] isascii
 - [ ] isprint
 - [ ] strlen
