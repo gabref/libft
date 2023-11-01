@@ -18,7 +18,7 @@ These function do not require any external functions
 - [x] isdigit
 - [x] isalnum
 - [x] isascii
-- [ ] isprint
+- [x] isprint
 - [ ] strlen
 - [ ] memset
 - [ ] bzero
