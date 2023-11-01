@@ -21,8 +21,8 @@ These function do not require any external functions
 - [x] isprint
 - [x] strlen
 - [x] memset
-- [ ] bzero
-- [ ] memcpy
+- [x] bzero
+- [x] memcpy
 - [ ] memmove
 - [ ] strlcpy
 - [ ] strlcat
