@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 23:13:36 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/01 23:22:05 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/11/01 23:37:46 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (!d_buffer && !s_buffer)
 		return (NULL);
 	while (n--)
-		*d_buffer++ = *s_buffer++;
+		*(d_buffer + n) = *(s_buffer + n);
 	return ((void *)d_buffer);
 }
