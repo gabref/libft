@@ -19,7 +19,7 @@ These function do not require any external functions
 - [x] isalnum
 - [x] isascii
 - [x] isprint
-- [ ] strlen
+- [x] strlen
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy

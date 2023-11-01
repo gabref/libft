@@ -6,13 +6,14 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2023/11/01 22:48:19 by galves-f         ###   ########.fr        #
+#    Updated: 2023/11/01 22:52:29 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
 # SRC 	= $(wildcard *.c)
-SRC 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
+SRC 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+		  ft_strlen.c
 # OBJ 	= $(SRC:.c=.o)
 OBJF 	= obj
 OBJ 	= $(patsubst %.c, $(OBJF)/%.o, $(SRC))
