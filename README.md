@@ -20,7 +20,7 @@ These function do not require any external functions
 - [x] isascii
 - [x] isprint
 - [x] strlen
-- [ ] memset
+- [x] memset
 - [ ] bzero
 - [ ] memcpy
 - [ ] memmove
