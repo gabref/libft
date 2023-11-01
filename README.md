@@ -23,7 +23,7 @@ These function do not require any external functions
 - [x] memset
 - [x] bzero
 - [x] memcpy
-- [ ] memmove
+- [x] memmove
 - [ ] strlcpy
 - [ ] strlcat
 - [ ] toupper
