@@ -24,8 +24,8 @@ These function do not require any external functions
 - [x] bzero
 - [x] memcpy
 - [x] memmove
-- [ ] strlcpy
-- [ ] strlcat
+- [x] strlcpy
+- [x] strlcat
 - [ ] toupper
 - [ ] tolower
 - [ ] strchr
