@@ -26,15 +26,15 @@ These function do not require any external functions
 - [x] memmove
 - [x] strlcpy
 - [x] strlcat
-- [ ] toupper
-- [ ] tolower
-- [ ] strchr
-- [ ] strrchr
-- [ ] strncmp
-- [ ] memchr
-- [ ] memcmp
-- [ ] strnstr
-- [ ] atoi
+- [x] toupper
+- [x] tolower
+- [x] strchr
+- [x] strrchr
+- [x] strncmp
+- [x] memchr
+- [x] memcmp
+- [x] strnstr
+- [x] atoi
 
 In order to implement the two following functions, you will use `malloc()`
 
