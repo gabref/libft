@@ -44,8 +44,8 @@ In order to implement the two following functions, you will use `malloc()`
 ## Part 2 - Additional functions
 In this second part, you must develop a set of functions that are either not int the `libc`, or that are part of it but in a different form. (Description and prototypes are in the pdf)
 
-- [ ] ft_substr
-- [ ] ft_strjoin
+- [x] ft_substr
+- [x] ft_strjoin
 - [ ] ft_strtrim
 - [ ] ft_split
 - [ ] ft_itoa
