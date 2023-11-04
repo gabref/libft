@@ -39,7 +39,7 @@ These function do not require any external functions
 In order to implement the two following functions, you will use `malloc()`
 
 - [ ] calloc
-- [ ] strdup
+- [x] strdup
 
 ## Part 2 - Additional functions
 In this second part, you must develop a set of functions that are either not int the `libc`, or that are part of it but in a different form. (Description and prototypes are in the pdf)
