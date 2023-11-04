@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/04 01:18:26 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/11/04 01:40:24 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# define INT_MAX 2147483647
+# define INT_MIN -2147483647 - 1
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -38,5 +41,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *nptr);
 char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif

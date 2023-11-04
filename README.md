@@ -38,7 +38,7 @@ These function do not require any external functions
 
 In order to implement the two following functions, you will use `malloc()`
 
-- [ ] calloc
+- [x] calloc
 - [x] strdup
 
 ## Part 2 - Additional functions
