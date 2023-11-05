@@ -47,9 +47,9 @@ In this second part, you must develop a set of functions that are either not int
 - [x] ft_substr
 - [x] ft_strjoin
 - [x] ft_strtrim
-- [ ] ft_split
-- [ ] ft_itoa
-- [ ] ft_strmapi
+- [x] ft_split
+- [x] ft_itoa
+- [x] ft_strmapi
 - [ ] ft_striteri
 - [ ] ft_putchar_fd
 - [ ] ft_putstr_fd

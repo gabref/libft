@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2023/11/05 13:24:56 by galves-f         ###   ########.fr        #
+#    Updated: 2023/11/05 22:43:46 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		  ft_strlcpy.c ft_strlcat.c ft_tolower.c ft_toupper.c ft_strchr.c \
 		  ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 		  ft_atoi.c ft_strdup.c ft_calloc.c ft_substr.c ft_strjoin.c \
-		  ft_strtrim.c ft_split.c
+		  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c
 # OBJ 	= $(SRC:.c=.o)
 OBJF 	= obj
 OBJ 	= $(patsubst %.c, $(OBJF)/%.o, $(SRC))

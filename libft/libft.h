@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/05 12:56:29 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/11/05 22:39:36 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # define INT_MAX 2147483647
-# define INT_MIN -2147483647 - 1
+# define INT_MIN -2147483648
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -46,5 +46,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
