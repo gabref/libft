@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 22:40:27 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/05 23:13:44 by galves-f         ###   ########.fr       */
+/*   Created: 2023/11/05 23:21:54 by galves-f          #+#    #+#             */
+/*   Updated: 2023/11/05 23:22:40 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*newstr;
-	int		i;
-
-	if (!s || !f)
-		return (NULL);
-	newstr = (char *)malloc(sizeof(char) * ft_strlen((const char *)s + 1));
-	if (newstr == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		newstr[i] = f(i, s[i]);
-		i++;
-	}
-	newstr[i] = '\0';
-	return (newstr);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
