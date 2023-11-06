@@ -4,3 +4,4 @@ test
 Libftest
 libft-war-machine
 a.out
+*.o
