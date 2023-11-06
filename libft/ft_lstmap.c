@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 22:40:27 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/06 11:14:12 by galves-f         ###   ########.fr       */
+/*   Created: 2023/11/06 00:36:49 by galves-f          #+#    #+#             */
+/*   Updated: 2023/11/06 11:09:33 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*newstr;
-	int		i;
+	t_list	*newlst;
+	t_list	*new;
 
-	if (!s || !f)
+	if (!lst || !f || !del)
 		return (NULL);
-	newstr = (char *)malloc(sizeof(char) * (ft_strlen((const char *)s) + 1));
-	if (newstr == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
+	newlst = NULL;
+	while (lst)
 	{
-		newstr[i] = f(i, s[i]);
-		i++;
+		new = ft_lstnew((*f)(lst->content));
+		if (new == NULL)
+		{
+			ft_lstclear(&newlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, new);
+		lst = lst->next;
 	}
-	newstr[i] = '\0';
-	return (newstr);
+	return (newlst);
 }
