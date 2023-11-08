@@ -5,6 +5,15 @@ on:
     tags:
       - '*'
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name (without "v" prefix, ex. 1.0.0)'
+        default: '1.0.0'
+      draft:
+        description: 'Should new release be a draft?'
+        type: boolean
+        required: true
+        default: true
 
 jobs:
   build:
@@ -36,6 +45,12 @@ jobs:
         with:
           artifacts: 'release/libft.a'
           token: ${{ secrets.GITHUB_TOKEN }}
-          # name: "release/libft.a"
+          allowUpdates: true
+          artifactErrorsFailBuild: true
+          tag: ${{ inputs.tag }}
+          generateReleaseNotes: true
+          draft: '${{ inputs.draft }}'
+          name: "Some unique name: release/libft.a ${{ inputs.tag }}"
+
           # tag: ${{ steps.newtag.outputs.newtag }}
           # bodyFile: "body.md"
