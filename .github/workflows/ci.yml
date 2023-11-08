@@ -9,25 +9,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    # permissions:
+    #   contents: write
     steps:
       - uses: actions/checkout@v4
-
-      - name: Run a multi-line script
-        run: echo maybe well install stuff here later
 
       - name: build
         run: cd libft && make && make clean
 
-      - name: set tag
-        id: newtag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # tag=$(gh release view --json tagName --jq '.tagName')
-          tag=$(git tag --list --sort='-version:refname' 'v*' | head -n1)
-          echo "newtag=$tag" >> "$GITHUB_OUTPUT"
+      # - name: set tag
+      #   id: newtag
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     # tag=$(gh release view --json tagName --jq '.tagName')
+      #     tag=$(git tag --list --sort='-version:refname' 'v*' | head -n1)
+      #     echo "newtag=$tag" >> "$GITHUB_OUTPUT"
 
       - name: create artifact
         run: |
@@ -37,7 +34,8 @@ jobs:
       - name: publish artifact
         uses: ncipollo/release-action@v1
         with:
-          name: "release/libft.a"
-          tag: ${{ steps.newtag.outputs.newtag }}
+          artifacts: 'release/libft.a'
           token: ${{ secrets.GITHUB_TOKEN }}
-          bodyFile: "body.md"
+          # name: "release/libft.a"
+          # tag: ${{ steps.newtag.outputs.newtag }}
+          # bodyFile: "body.md"
