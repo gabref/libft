@@ -1,13 +1,14 @@
 #!/bin/bash
+
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    tester.sh                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ffrau <ffrau@student.42.fr>                +#+  +:+       +#+         #
+#    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/19 17:16:44 by ffrau             #+#    #+#              #
-#    Updated: 2022/05/22 20:53:58 by ffrau            ###   ########.fr        #
+#    Updated: 2023/11/01 22:24:45 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,13 +111,13 @@ valid_params(){
 	else
 		warmachine
 		press_any_key
-		libft_unit_test
-		press_any_key
+		# libft_unit_test
+		# press_any_key
 		libfttest
-		press_any_key
-		libfttester
-		press_any_key
-		libft_tester
+		# press_any_key
+		# libfttester
+		# press_any_key
+		# libft_tester
 	fi
 }
 
@@ -132,12 +133,12 @@ download_repos(){
 		exit
 	fi
 
-	if [ ! -f ${PATH_LIBFT}/libft.h ]; then
-		printf "You're an iditot, check the path into \"/libft-war-machine/my_config.sh\" and then start this script...\n"
-		printf "Your current path is $PWD\n"
-		open ${CURR_PATH}/libft-war-machine/my_config.sh
-		exit
-	fi
+	# if [ ! -f ${PATH_LIBFT}/libft.h ]; then
+	# 	printf "You're an iditot, check the path into \"/libft-war-machine/my_config.sh\" and then start this script...\n"
+	# 	printf "Your current path is $PWD\n"
+	# 	open ${CURR_PATH}/libft-war-machine/my_config.sh
+	# 	exit
+	# fi
 
 	if [ ! -d ./]Libftest/ ]; then
 		printf ${LGREEN}"Installing the jtoty tester..."${NC}; echo
@@ -146,26 +147,26 @@ download_repos(){
 		clear
 	fi
 	
-	if [ ! -d ${PATH_LIBFT}/libftTester ]; then
-		printf ${LGREEN}"Installing the Tripouille tester..."${NC}; echo 
-		git clone https://github.com/Tripouille/libftTester.git
-		mv ${CURR_PATH}/libftTester ${PATH_LIBFT}/libftTester
-		clear
-	fi
+	# if [ ! -d ${PATH_LIBFT}/libftTester ]; then
+	# 	printf ${LGREEN}"Installing the Tripouille tester..."${NC}; echo 
+	# 	git clone https://github.com/Tripouille/libftTester.git
+	# 	mv ${CURR_PATH}/libftTester ${PATH_LIBFT}/libftTester
+	# 	clear
+	# fi
 
-	if [ ! -d ${PATH_LIBFT}/../libft-unit-test ]; then	
-		printf ${LGREEN}"Installing the alelievr tester..."${NC}; echo 
-		git clone https://github.com/alelievr/libft-unit-test.git
-		mv ${CURR_PATH}/libft-unit-test ${PATH_LIBFT}/../libft-unit-test
-		clear
-	fi
-	
-	if [ ! -d ${PATH_LIBFT}/../libft_tester ]; then
-		printf ${LGREEN}"Installing the adrossig tester..."${NC}; echo 
-		git clone https://github.com/adrossig/libft_tester.git
-		mv ${CURR_PATH}/libft_tester ${PATH_LIBFT}/../
-		clear
-	fi
+	# if [ ! -d ${PATH_LIBFT}/../libft-unit-test ]; then	
+	# 	printf ${LGREEN}"Installing the alelievr tester..."${NC}; echo 
+	# 	git clone https://github.com/alelievr/libft-unit-test.git
+	# 	mv ${CURR_PATH}/libft-unit-test ${PATH_LIBFT}/../libft-unit-test
+	# 	clear
+	# fi
+
+	# if [ ! -d ${PATH_LIBFT}/../libft_tester ]; then
+	# 	printf ${LGREEN}"Installing the adrossig tester..."${NC}; echo 
+	# 	git clone https://github.com/adrossig/libft_tester.git
+	# 	mv ${CURR_PATH}/libft_tester ${PATH_LIBFT}/../
+	# 	clear
+	# fi
 }
 
 clear
