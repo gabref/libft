@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:56:39 by galves-f          #+#    #+#             */
-/*   Updated: 2024/01/10 13:30:41 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/01/10 09:55:29 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ static int	count_words(char *str, char c)
 	return (words);
 }
 
-static void fill(const char *s, char c, char **splitted, int words) {
-	int start;
-	int end;
-	int c_word;
+static void	fill(const char *s, char c, char **splitted, int words)
+{
+	int	start;
+	int	end;
+	int	c_word;
 
 	c_word = 0;
 	start = 0;
@@ -46,8 +47,7 @@ static void fill(const char *s, char c, char **splitted, int words) {
 		end = start + 1;
 		while (s[end] && s[end] != c)
 			end++;
-		splitted[c_word++] = ft_substr((const char *)s, start,
-				end - start);
+		splitted[c_word++] = ft_substr((const char *)s, start, end - start);
 	}
 	*(splitted + c_word) = NULL;
 }
