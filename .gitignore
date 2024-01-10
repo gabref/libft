@@ -2,6 +2,9 @@ obj
 libft.a
 test
 Libftest
+libft_tester
+libft/libftTester
+Libft-unit-test
 libft-war-machine
 a.out
 *.o
