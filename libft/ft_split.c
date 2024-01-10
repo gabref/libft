@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:56:39 by galves-f          #+#    #+#             */
-/*   Updated: 2024/01/10 12:44:27 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/01/10 09:12:06 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ char	**ft_split(char const *s, char c)
 		start_end[1] = start_end[0] + 1;
 		while (s[start_end[1]] && s[start_end[1]] != c)
 			start_end[1]++;
-		splitted[c_word++] = ft_substr((const char *)s, start_end[0], start_end[1] - start_end[0]);
+		splitted[c_word++] = ft_substr((const char *)s, start_end[0],
+				start_end[1] - start_end[0]);
 	}
 	*(splitted + c_word) = NULL;
 	return (splitted);
