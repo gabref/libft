@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
+/*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:56:39 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/05 13:23:19 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/01/10 12:44:27 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,24 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	char	**splitted;
 	int		c_word;
-	int		start;
-	int		end;
+	int		start_end[2];
 
 	words = count_words((char *)s, c);
 	splitted = (char **)malloc(sizeof(char *) * (words + 1));
+	if (splitted == NULL)
+		return (NULL);
 	c_word = 0;
-	start = 0;
-	end = 0;
+	start_end[0] = 0;
+	start_end[1] = 0;
 	while (c_word < words)
 	{
-		start = end;
-		while (s[start] && s[start] == c)
-			start++;
-		end = start + 1;
-		while (s[end] && s[end] != c)
-			end++;
-		splitted[c_word] = ft_substr((const char *)s, start, end - start);
-		c_word++;
+		start_end[0] = start_end[1];
+		while (s[start_end[0]] && s[start_end[0]] == c)
+			start_end[0]++;
+		start_end[1] = start_end[0] + 1;
+		while (s[start_end[1]] && s[start_end[1]] != c)
+			start_end[1]++;
+		splitted[c_word++] = ft_substr((const char *)s, start_end[0], start_end[1] - start_end[0]);
 	}
 	*(splitted + c_word) = NULL;
 	return (splitted);
