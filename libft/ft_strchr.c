@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
+/*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:02:32 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/03 17:19:09 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/01/10 16:43:54 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
-		if (*s++ == c)
+		if (*s++ == (char) c)
 			return ((char *)--s);
-	if (*s == c)
+	if (*s == (char) c)
 		return ((char *)s);
 	return (NULL);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
+/*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 01:32:19 by galves-f          #+#    #+#             */
-/*   Updated: 2024/01/10 09:09:27 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/01/10 16:44:45 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*arr;
 
-	if (nmemb > (INT_MAX / size))
+	if (size && nmemb > (INT_MAX / size))
 		return (NULL);
 	arr = malloc(size * nmemb);
 	if (arr == NULL)
