@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2023/11/06 00:36:41 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/02/12 20:16:15 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line.h"
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
