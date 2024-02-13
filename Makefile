@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/02/13 08:53:45 by galves-f         ###   ########.fr        #
+#    Updated: 2024/02/13 09:27:48 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -153,7 +153,8 @@ SRC_PCT = $(shell expr 100 \* $(SRC_COUNT) / $(SRC_COUNT_TOT))
 #                                 Makefile rules                             #
 ################################################################################
 
-all: header $(NAME)
+# all: header $(NAME)
+all: $(NAME)
 	@rm -rf .files_changed
 
 header:
@@ -188,12 +189,12 @@ objs/%.o: 	$(SRCS_PATH)/%$(FILE_EXTENSION)
 			@printf "\r%100s\r[ %d/%d (%d%%) ] Compiling $(BLUE)$<$(DEFAULT)..." "" $(SRC_COUNT) $(SRC_COUNT_TOT) $(SRC_PCT)
 			@$(CC) $(CFLAGS) -c $< -o $@ -I$(INCLUDE_PATH)
 
-clean:		header
+clean:		
 			@printf "$(CYAN)Cleaning up object files in libft...$(DEFAULT)\n\n"
 			@rm -rf objs
 			@printf "%-53b%b" "$(COM_COLOR)clean:" "$(OK_COLOR)[✓]$(NO_COLOR)\n"
 
-fclean:		header clean
+fclean:		clean
 			@rm -rf $(NAME)
 			@printf "%-53b%b" "$(COM_COLOR)fclean:" "$(OK_COLOR)[✓]$(NO_COLOR)\n"
 
