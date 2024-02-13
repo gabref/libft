@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:18:18 by galves-f          #+#    #+#             */
-/*   Updated: 2024/02/12 10:04:20 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:09:41 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 char	*get_next_line(int fd);
 int		has_newline(int start, char *str);
 int		find_newline(char *str);
-int		ft_strlen(char *str);
-char	*strjoin(char *s1, char *s2, int s1_len, int s2_len);
+int		gnl_strlen(char *str);
+char	*gnl_strjoin(char *s1, char *s2, int s1_len, int s2_len);
 
 #endif

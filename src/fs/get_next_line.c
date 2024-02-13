@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:39:06 by galves-f          #+#    #+#             */
-/*   Updated: 2024/01/17 01:51:07 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:10:08 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	read_fd_add_cache(int fd, char **cache)
 		if (rbytes == -1)
 			return (0);
 		buf[rbytes] = '\0';
-		last_cache_len = ft_strlen(*cache);
-		*cache = strjoin(*cache, buf, last_cache_len, rbytes);
+		last_cache_len = gnl_strlen(*cache);
+		*cache = gnl_strjoin(*cache, buf, last_cache_len, rbytes);
 		if (*cache == NULL)
 			return (0);
 	}
@@ -94,7 +94,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if (!read_fd_add_cache(fd, &cache[fd]))
 		return (NULL);
-	cache_len = ft_strlen(cache[fd]);
+	cache_len = gnl_strlen(cache[fd]);
 	if (!extract_line(cache[fd], cache_len, &next_line))
 		return (NULL);
 	if (!clean_cache(&cache[fd], cache_len))
