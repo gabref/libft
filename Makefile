@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/02/13 09:27:48 by galves-f         ###   ########.fr        #
+#    Updated: 2024/02/17 00:47:07 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,9 @@ SRCS			= convert/ft_atoi.c \
 					linked_list/ft_lstlast.c \
 					linked_list/ft_lstmap.c \
 					linked_list/ft_lstnew.c \
-					linked_list/ft_lstsize.c
+					linked_list/ft_lstsize.c \
+					linked_list/ft_lstget.c \
+					linked_list/ft_lstiter_param.c
 
 ################################################################################
 #                                  Makefile  objs                              #
