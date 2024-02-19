@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/02/17 00:47:07 by galves-f         ###   ########.fr        #
+#    Updated: 2024/02/19 19:34:18 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRCS			= convert/ft_atoi.c \
 					check/ft_isascii.c \
 					check/ft_isdigit.c \
 					check/ft_isprint.c \
+					check/ft_isword.c \
 					memory/ft_bzero.c \
 					memory/ft_calloc.c \
 					memory/ft_memchr.c \
@@ -56,6 +57,7 @@ SRCS			= convert/ft_atoi.c \
 					fs/get_next_line.c \
 					fs/get_next_line_utils.c \
 					string/ft_split.c \
+					string/ft_split_word.c \
 					string/ft_strchr.c \
 					string/ft_strdup.c \
 					string/ft_striteri.c \
