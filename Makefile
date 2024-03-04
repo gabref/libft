@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/02/19 19:34:18 by galves-f         ###   ########.fr        #
+#    Updated: 2024/03/04 01:17:05 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SRCS_PATH		= src
 INCLUDE_PATH	= inc
 
 SRCS			= convert/ft_atoi.c \
+					convert/ft_atol.c \
 					convert/ft_itoa.c \
+					convert/ft_uitoa.c \
 					convert/ft_tolower.c \
 					convert/ft_toupper.c \
 					check/ft_isalnum.c \
@@ -50,6 +52,11 @@ SRCS			= convert/ft_atoi.c \
 					memory/ft_memcpy.c \
 					memory/ft_memmove.c \
 					memory/ft_memset.c \
+					memory/ft_free_multiple.c \
+					memory/ft_free_2d_array.c \
+					math/ft_nbrlen_base.c \
+					math/ft_pow.c \
+					math/ft_sqrt.c \
 					fs/ft_putchar_fd.c \
 					fs/ft_putendl_fd.c \
 					fs/ft_putnbr_fd.c \
