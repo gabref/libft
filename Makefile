@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/03/04 01:17:05 by galves-f         ###   ########.fr        #
+#    Updated: 2024/03/13 15:05:11 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ SRCS			= convert/ft_atoi.c \
 					linked_list/ft_lstadd_front.c \
 					linked_list/ft_lstclear.c \
 					linked_list/ft_lstdelone.c \
+					linked_list/ft_lstremove.c \
 					linked_list/ft_lstiter.c \
 					linked_list/ft_lstlast.c \
 					linked_list/ft_lstmap.c \

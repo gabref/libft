@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2024/03/04 01:16:33 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:14:36 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,11 @@ t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *newn);
 /* Deletes, frees, and applies function del to content of a given node */
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
+/* Removes a node from the list without freeing it */
+void				ft_lstremove(t_list **lst, t_list *node);
+/* Removes a node from the list, freeing it */
+void				ft_lstremove_del(t_list **lst, t_list *node,
+						void (*del)(void *));
 /* Deletes a given element and every element after that */
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 /* Applies a function to the content of every node of the linked list */
