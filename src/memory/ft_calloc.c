@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 01:32:19 by galves-f          #+#    #+#             */
-/*   Updated: 2024/01/11 15:54:35 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/03/16 15:26:45 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*arr;
 
-	if (size && nmemb > (INT_MAX / size))
+	if (size && nmemb > (LIBFT_INT_MAX / size))
 		return (NULL);
 	arr = malloc(size * nmemb);
 	if (arr == NULL)

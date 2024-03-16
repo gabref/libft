@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2024/03/13 15:14:36 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/03/16 15:26:34 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
+# define LIBFT_INT_MAX 2147483647
+# define LIBFT_INT_MIN -2147483648
 
 typedef struct s_list
 {
