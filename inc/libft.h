@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2024/03/16 15:26:34 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/07/29 22:53:13 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,9 @@ int					ft_pow(int nb, int power);
 int					ft_sqrt(int nb);
 
 long				ft_atol(const char *str);
+
+/* Converts a character to a string */
+char				*ft_char_to_string(char c);
 
 void				ft_free_multiple(int n, ...);
 void				ft_free_2d_array(void **arr);
