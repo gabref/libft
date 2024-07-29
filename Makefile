@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/03/13 15:18:27 by galves-f         ###   ########.fr        #
+#    Updated: 2024/07/30 00:50:31 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRCS			= convert/ft_atoi.c \
 					convert/ft_uitoa.c \
 					convert/ft_tolower.c \
 					convert/ft_toupper.c \
+					convert/ft_char_to_string.c \
 					check/ft_isalnum.c \
 					check/ft_isalpha.c \
 					check/ft_isascii.c \
