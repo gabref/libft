@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2024/07/29 22:53:13 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/07/31 11:21:00 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,5 +155,6 @@ char				*ft_char_to_string(char c);
 
 void				ft_free_multiple(int n, ...);
 void				ft_free_2d_array(void **arr);
+char				*ft_read_fd_to_string(int fd);
 
 #endif

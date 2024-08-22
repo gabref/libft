@@ -6,13 +6,13 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:13:13 by galves-f          #+#    #+#             */
-/*   Updated: 2024/03/13 15:14:17 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/08/22 13:57:33 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../inc/libft.h"
+#include "../../inc/libft.h"
 
-void ft_lstremove_del(t_list **lst, t_list *node, void (*del)(void*))
+void	ft_lstremove_del(t_list **lst, t_list *node, void (*del)(void *))
 {
 	t_list	*prev;
 	t_list	*curr;

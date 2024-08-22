@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstremove.c                                     :+:      :+:    :+:   */
+/*   ft_read_fd_to_string.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 15:05:25 by galves-f          #+#    #+#             */
-/*   Updated: 2024/08/22 13:57:18 by galves-f         ###   ########.fr       */
+/*   Created: 2024/07/31 11:19:15 by galves-f          #+#    #+#             */
+/*   Updated: 2024/08/22 13:57:53 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void	ft_lstremove(t_list **lst, t_list *node)
+char	*ft_read_fd_to_string(int fd)
 {
-	t_list	*prev;
-	t_list	*curr;
+	char	*fd_as_string;
+	char	*line;
+	char	*tmp;
 
-	if (!lst || !*lst || !node)
-		return ;
-	if (*lst == node)
+	line = get_next_line(fd);
+	fd_as_string = ft_strdup("");
+	while (line != NULL)
 	{
-		*lst = node->next;
-		return ;
+		tmp = fd_as_string;
+		fd_as_string = ft_strjoin(tmp, line);
+		free(line);
+		free(tmp);
+		line = get_next_line(fd);
 	}
-	prev = *lst;
-	curr = prev->next;
-	while (curr)
-	{
-		if (curr == node)
-		{
-			prev->next = curr->next;
-			return ;
-		}
-		prev = curr;
-		curr = curr->next;
-	}
+	return (fd_as_string);
 }
