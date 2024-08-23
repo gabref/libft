@@ -6,7 +6,7 @@
 /*   By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:43:08 by galves-f          #+#    #+#             */
-/*   Updated: 2024/07/31 11:21:00 by galves-f         ###   ########.fr       */
+/*   Updated: 2024/08/23 13:38:58 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "get_next_line.h"
 # include <stdarg.h>
 # include <stdlib.h>
+# include <stdbool.h>
 # include <unistd.h>
 
 # define LIBFT_INT_MAX 2147483647
@@ -156,5 +157,6 @@ char				*ft_char_to_string(char c);
 void				ft_free_multiple(int n, ...);
 void				ft_free_2d_array(void **arr);
 char				*ft_read_fd_to_string(int fd);
+bool				ft_is_between_char(char *input, char *sub_input, char c);
 
 #endif

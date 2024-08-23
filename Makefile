@@ -6,7 +6,7 @@
 #    By: galves-f <galves-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 20:31:25 by galves-f          #+#    #+#              #
-#    Updated: 2024/07/30 00:50:31 by galves-f         ###   ########.fr        #
+#    Updated: 2024/08/23 13:39:33 by galves-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRCS			= convert/ft_atoi.c \
 					string/ft_strrchr.c \
 					string/ft_strtrim.c \
 					string/ft_substr.c \
+					string/ft_is_between_char.c \
 					linked_list/ft_lstadd_back.c \
 					linked_list/ft_lstadd_front.c \
 					linked_list/ft_lstclear.c \
